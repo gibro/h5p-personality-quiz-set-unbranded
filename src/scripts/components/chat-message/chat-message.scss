@@ -1,0 +1,78 @@
+.h5p-personality-quiz-set-chat-message-container {
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  width: min(100%, 60em);
+
+  &.display-none {
+    display: none;
+  }
+
+  .h5p-personality-quiz-set-chat-message {
+    background-color: #eeeeee;
+    border-radius: 1rem 1rem 1rem 0;
+    box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    font-weight: normal;
+    line-height: 1rem;
+    margin-left: 2.5rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    text-align: left;
+    width: fit-content;
+
+    p {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .typing-animation-dots {
+      box-sizing: border-box;
+      padding: calc(0.25rem + 1px) 0;
+      height: 1rem;
+
+      .typing-animation-dot {
+        float: left;
+        width: 0.5rem;
+        height: 0.5rem;
+        margin: 0 0.25rem;
+        background: #8d8c91;
+        border-radius: 50%;
+        opacity: 0;
+        animation: loadingFade 1s infinite;
+
+        &:nth-child(1) {
+          animation-delay: 0s;
+        }
+
+        &:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+
+        &:nth-child(3) {
+          animation-delay: 0.4s;
+        }
+      }
+    }
+
+    &::before {
+      background-color: var(--color-button-active, rgb(48, 59, 107));
+      border: 1px solid transparent;
+      border-radius: 100%;
+      color: var(--color-button-text-active, rgb(255, 255, 255));
+      content: "?";
+      display: block;
+      font-weight: bold;
+      height: 2rem;
+      line-height: 2rem;
+      text-align: center;
+      width: 2rem;
+      position: absolute;
+      bottom: -1rem;
+      left: -2.5rem;
+    }
+  }
+}

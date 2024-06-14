@@ -1,0 +1,18 @@
+@import '@styles/main';
+
+html {
+  box-sizing: border-box;
+}
+
+.h5p-personality-quiz {
+  --color-box-shadow: rgb(166 166 166 / 20%);
+  --color-disabled: rgb(128 128 128 / 95%);
+  --color-text-light: #fff;
+
+  --color-primary: rgb(26, 115, 217);
+  --color-primary-5: rgba(26, 115, 217, .05);
+  --color-primary-10: rgba(26, 115, 217, .1);
+  --color-primary-90: rgba(26, 115, 217, .9);
+  --color-primary-95: rgba(26, 115, 217, .95);
+}
+

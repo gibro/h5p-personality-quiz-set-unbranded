@@ -1,0 +1,41 @@
+@import "@styles/main";
+
+.progress-bar {
+  background: linear-gradient(
+    90deg,
+    var(--color-background) 0%,
+    var(--color-background) 25%,
+    var(--color-background-contrast) 100%
+    );
+  background-color: var(--color-background);
+  box-shadow: 10px 10px 30px $color-shadow-light;
+  content: "";
+  color: var(--color-text);
+  height: 2rem;
+  position: relative;
+  width: 100%;
+
+  .progress-bar-label {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    padding-left: 0.75rem;
+    position: relative;
+  }
+
+  &::before {
+    background-color: var(--color-base);
+    content: "";
+    height: 2rem;
+    position: absolute;
+    width: calc(var(--bar-width, 0) * 1%);
+  }
+
+  &.is-animated::before {
+    transition: width ease-out 0.3s;
+  }
+
+  &.display-none {
+    display: none;
+  }
+}

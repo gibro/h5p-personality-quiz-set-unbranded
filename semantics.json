@@ -1,0 +1,287 @@
+[
+  {
+    "name": "showTitleScreen",
+    "label": "Show title screen",
+    "description": "If checked, a title screen will show up when starting.",
+    "type": "boolean",
+    "default": false,
+    "optional": true
+  },
+  {
+    "name": "titleScreen",
+    "type": "group",
+    "label": "Title Screen",
+    "expanded": false,
+    "fields": [
+      {
+        "name": "titleScreenIntroduction",
+        "label": "Introduction",
+        "type": "text",
+        "optional": true,
+        "widget": "html",
+        "enterMode": "div",
+        "tags": [
+          "sub",
+          "sup",
+          "strong",
+          "em",
+          "p",
+          "code",
+          "u",
+          "del",
+          "a",
+          "ul",
+          "ol",
+          "hr",
+          "pre",
+          "code"
+        ],
+        "font": {
+          "size": true,
+          "color": true,
+          "background": true
+        },
+        "default": "<p style=\"text-align: center;\"></p>"
+      },
+      {
+        "name": "titleScreenMedium",
+        "label": "Title screen medium",
+        "type": "library",
+        "optional": true,
+        "options": [
+          "H5P.Image 1.1",
+          "H5P.Video 1.6"
+        ]
+      }
+    ],
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "showTitleScreen",
+          "equals": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "content",
+    "type": "list",
+    "label": "List of contents",
+    "importance": "high",
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ],
+    "min": 1,
+    "entity": "content",
+    "field": {
+      "name": "content",
+      "type": "group",
+      "fields": [
+        {
+          "name": "introText",
+          "type": "text",
+          "label": "Introductory text",
+          "description": "Optional introductory text before this quiz starts.",
+          "importance": "low",
+          "widget": "html",
+          "enterMode": "div",
+          "tags": [
+            "sub",
+            "sup",
+            "strong",
+            "em",
+            "p",
+            "code",
+            "u",
+            "del",
+            "a",
+            "ul",
+            "ol",
+            "pre",
+            "code"
+          ],
+          "font": {},
+          "optional": true
+        },
+        {
+          "name": "libraryParams",
+          "type": "library",
+          "label": "Content",
+          "importance": "high",
+          "options": [
+            "H5P.PersonalityQuiz 1.1"
+          ]
+        },
+        {
+          "name": "outroText",
+          "type": "text",
+          "label": "Closing text",
+          "description": "Optional closing text after this quiz is completed.",
+          "importance": "low",
+          "widget": "html",
+          "enterMode": "div",
+          "tags": [
+            "sub",
+            "sup",
+            "strong",
+            "em",
+            "p",
+            "code",
+            "u",
+            "del",
+            "a",
+            "ul",
+            "ol",
+            "pre",
+            "code"
+          ],
+          "font": {},
+          "optional": true
+        },
+        {
+          "name": "resultsTitle",
+          "type": "text",
+          "label": "Results title",
+          "description": "Optional title to lead this quizzes results with.",
+          "importance": "low",
+          "optional": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "results",
+    "type": "group",
+    "importance": "low",
+    "label": "Results settings",
+    "fields": [
+      {
+        "name": "showPersonality",
+        "type": "boolean",
+        "label": "Show personality type name",
+        "description": "Check to show personality type name within results. Will show automatically if no personality type description is entered or no image is set.",
+        "default": true
+      },
+      {
+        "name": "personalityTextPrefix",
+        "type": "text",
+        "label": "Personality type name prefix",
+        "description": "Optionally put this prefix in front of the personality type name.",
+        "default": "Personality type:",
+        "optional": true,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "showPersonality",
+              "equals": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "visual",
+    "type": "group",
+    "importance": "low",
+    "label": "Visual settings",
+    "fields": [
+      {
+        "name": "showProgressBar",
+        "type": "boolean",
+        "label": "Show progress bar",
+        "description": "Check to show progress bar.",
+        "default": true
+      },
+      {
+        "name": "color",
+        "type": "text",
+        "label": "Base color",
+        "description": "Set the base color that will determine the color for visual elements.",
+        "default": "#e05c00",
+        "widget": "colorSelector",
+        "spectrum": {
+          "showInput": true,
+          "showInitial": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "label": "User interface",
+    "common": true,
+    "fields": [
+      {
+        "name": "currentOfTotal",
+        "type": "text",
+        "label": "Text in progress bar",
+        "description": "@current and @total are placeholders and will be replaced with the respective values.",
+        "default": "@current of @total"
+      },
+      {
+        "name": "noTitle",
+        "type": "text",
+        "label": "Content without a title",
+        "default": "Untitled"
+      },
+      {
+        "name": "resultsIntro",
+        "type": "text",
+        "label": "Introductory message for results",
+        "default": "Here are your results:"
+      },
+      {
+        "name": "start",
+        "type": "text",
+        "label": "Label of \"Start\" button",
+        "default": "Start"
+      },
+      {
+        "name": "restart",
+        "type": "text",
+        "label": "Label of \"Restart\" button",
+        "default": "Restart"
+      },
+      {
+        "name": "exportPDF",
+        "type": "text",
+        "label": "Label of \"Export PDF\" button",
+        "default": "Export PDF"
+      },
+      {
+        "name": "footerText",
+        "type": "text",
+        "label": "Footer text",
+        "maxLength": 1000,
+        "default": "This research and development project is funded by the German Federal Ministry of Education and Research (BMBF) in the program \"Future of Value Creation - Research on Production, Service and Work\" and is supervised by the Project Management Agency Karlsruhe (PTKA). The responsibility for the content of this publication lies with the author."
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "label": "Accessibility texts",
+    "common": true,
+    "fields": [
+      {
+        "name": "progressBar",
+        "label": "Progress bar",
+        "type": "text",
+        "default": "Progress bar"
+      },
+      {
+        "name": "titleScreenWasOpened",
+        "label": "Title screen opened",
+        "type": "text",
+        "default": "The title screen was opened."
+      }
+    ]
+  }
+]

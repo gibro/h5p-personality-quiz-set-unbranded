@@ -1,0 +1,122 @@
+{
+  "semantics": [
+    {
+      "label": "Zeige Titelbildschirm",
+      "description": "Wenn gewählt, wird zu Beginn ein Titelbildschirm eingeblendet."
+    },
+    {
+      "label": "Titelbildschirm",
+      "fields": [
+        {
+          "label": "Einleitung"
+        },
+        {
+          "label": "Titelbildschirm-Medium"
+        }
+      ]
+    },
+    {
+      "label": "Unterquizzes",
+      "widgets": [
+        {
+          "label": "Vorgabe"
+        }
+      ],
+      "entity": "Unterquiz",
+      "field": {
+        "fields": [
+          {
+            "label": "Einleitungstext",
+            "description": "Optionaler Einleitungstext bevor das Unterquiz beginnt."
+          },
+          {
+            "label": "Unterquiz"
+          },
+          {
+            "label": "Abschlusstext",
+            "description": "Optionaler Abschlusstext nachdem das Unterquiz absolviert wurde."
+          },
+          {
+            "label": "Ergebnistitel",
+            "description": "Optionaler Titel vor dem Ergebnis dieses Unterquizzes."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Ergebniseinstellungen",
+      "fields": [
+        {
+          "label": "Zeige Name des Persönlichkeitstyps",
+          "description": "Wenn angewählt, wird der Name des Persönlichkeitstyps in den Ergebnissen Angezeigt. Er wird automatisch angezeigt, wenn keine Beschreibung und kein Bild angegeben wurden."
+        },
+        {
+          "label": "Vorangestellter Text für Namen des Persönlichkeitstyps",
+          "description": "Stelle optional diesen Text dem Namen des Persönlichkeitstyps voran.",
+          "default": "Persönlichkeitstyp:"
+        }
+      ]
+    },
+    {
+      "label": "Visuelles",
+      "fields": [
+        {
+          "label": "Zeige Fortschrittsbalken",
+          "description": "Wenn angewählt, wird ein Fortschrittsbalken für alle Unterquizze angezeigt."
+        },
+        {
+          "label": "Grundfarbe",
+          "description": "Setze die Grundfarbe, die die Farbe für visuelle Elemente bestimmt.",
+          "default": "#e05c00"
+        }
+      ]
+    },
+    {
+      "label": "Bedienoberfläche",
+      "fields": [
+        {
+          "label": "Text im Fortschrittsbalken",
+          "description": "@current und @total sind Platzhalter und werden durch die entsprechenden Werte ersetzt.",
+          "default": "@current von @total"
+        },
+        {
+          "label": "Inhalt ohne Titel",
+          "default": "Unbenannt"
+        },
+        {
+          "label": "Einleitungstext für die Ergebnisse",
+          "default": "Hier sind Ihre Ergebnisse:"
+        },
+        {
+          "label": "Beschriftung des \"Start\"-Buttons",
+          "default": "Start"
+        },
+        {
+          "label": "Beschriftung des \"Neu starten\"-Buttons",
+          "default": "Neu starten"
+        },
+        {
+          "label": "Beschriftung des \"Export PDF\"-Buttons",
+          "default": "Exportiere PDF"
+        },
+        {
+          "label": "Footer-Text",
+          "default": "Dieses Forschungs- und Entwicklungsprojekt wird durch das Bundesministerium für Bildung und Forschung (BMBF) im Programm \"Zukunft der Wertschöpfung - Forschung zu Produktion, Dienstleistung und Arbeit\" gefördert und vom Projektträger Karlsruhe (PTKA) betreut. Die Verantwortung für den Inhalt dieser Veröffentlichung liegt bei der Autorin / beim Autor."
+        }
+      ]
+    },
+    {
+      "label": "Texte für Barrierefreiheit",
+      "fields": [
+        {
+          "label": "Fortschrittsbalken",
+          "default": "Fortschrittsbalken"
+        },
+        {
+          "label": "Titelbildschirm geöffnet",
+          "default": "Der Titelbildschirm wurde geöffnet."
+        }
+      ]
+    }
+  ]
+}

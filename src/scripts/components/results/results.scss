@@ -1,0 +1,139 @@
+@import '@styles/main';
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.h5p-personality-quiz-set-results {
+  align-items: center;
+  color: #4c4452;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+
+  &.offscreen {
+    position: absolute;
+    top: 0;
+    left: -5000rem;
+  }
+
+  &.display-none {
+    display: none;
+  }
+
+  .h5p-personality-quiz-set-results-panels {
+    background-color: #eeeeee;
+    box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    gap: 2.5rem;
+    line-height: 1rem;
+    margin: 0 2.5rem;
+    padding: 1rem;
+    width: min(calc(100% - 5rem), 60em);
+
+    &.export {
+      width: 50rem;
+    }
+
+    &.display-none {
+      display: none;
+    }
+
+    .h5p-personality-quiz-set-results-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .h5p-personality-quiz-set-results-panel-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+      }
+
+      // Would be easier with object-fit, but then screenshots don't work
+      .h5p-personality-quiz-set-results-panel-image {
+        --max-height: 10rem;
+        align-self: center;
+        max-height: var(--max-height);
+      }
+
+      .h5p-personality-quiz-set-results-panel-personality {
+        font-style: italic;
+      }
+
+      .h5p-personality-quiz-set-results-panel-description {
+        p:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .h5p-personality-quiz-set-results-buttons {
+    display: flex;
+    gap: 1rem;
+
+    .h5p-personality-quiz-set-results-button {
+      align-self: center;
+      background-color: var(--color-button-background);
+      background-size: cover;
+      border: 0;
+      border-radius: 3px;
+      color: var(--color-button-text);
+      font-size: 20px;
+      font-weight: 400;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      text-decoration: none solid var(--color-button-text);
+      white-space: nowrap;
+      width: fit-content;
+
+      &::before {
+        display: inline-block; // Essential for animation of pseudo element
+        font-family: "H5PFontAwesome4", sans-serif;
+        margin-right: 0.25rem;
+        width: 1.25rem;
+      }
+
+      &:active {
+        background-color: var(--color-button-active);
+      }
+
+      &:not([disabled]):hover {
+        background-color: var(--color-button-hover);
+        cursor: pointer;
+      }
+
+      &.restart {
+        &::before {
+          content: "\f01e";
+        }
+      }
+
+      &.export-pdf {
+        &:not(is-exporting) {
+          &::before {
+            content: "\f1c1";
+          }
+        }
+
+        &.is-exporting {
+          cursor: inherit;
+
+          &::before {
+            animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            content: "\f110";
+          }
+        }
+      }
+    }
+  }
+}

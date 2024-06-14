@@ -1,0 +1,38 @@
+.h5p-personality-quiz-set-footer {
+  background-color: rgb(27, 37, 43);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  height: fit-content;
+  padding: 1rem;
+
+  &.export {
+    width: 50rem;
+  }
+
+  &.offscreen {
+    position: absolute;
+    top: 0;
+    left: -5000rem;
+  }
+
+  .h5p-personality-quiz-set-footer-logo {
+    background-image: url("@assets/logo-footer.png");
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 157px;
+    width: min(350px, 100%);
+  }
+
+  .h5p-personality-quiz-set-footer-text {
+    color: #a3a5ab;
+    flex-basis: 45%;
+    flex-grow: 1;
+    line-height: 1.5;
+  }
+}
