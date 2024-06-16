@@ -1,6 +1,6 @@
 {
-  "name": "h5p-personality-quiz-set-igm",
-  "version": "1.0.4",
+  "name": "h5p-personality-quiz-set-igm-unbranded",
+  "version": "1.0.5",
   "description": "Present multiple personality quizzes",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/otacke/h5p-personality-quiz-set-igm.git"
+    "url": "git+https://github.com/otacke/h5p-personality-quiz-set-unbranded.git"
   },
   "keywords": [
     "h5p",
